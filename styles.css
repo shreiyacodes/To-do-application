@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* To-Do Container Styling */
+.todo-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #007bff;
+}
+
+/* Input Section Styling */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-section input:focus {
+    border-color: #0056b3;
+}
+
+#addButton {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#addButton:hover {
+    background-color: #0056b3;
+}
+
+/* To-Do List Styling */
+#todoList {
+    list-style-type: none;
+}
+
+.todo-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #007bff;
+    position: relative;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-item .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.todo-item .description {
+    font-size: 14px;
+    color: #555;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    #addButton {
+        padding: 12px;
+    }
+
+    .todo-item {
+        padding: 15px;
+    }
+}
